@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R a+x*
+cp -p -R a+x
