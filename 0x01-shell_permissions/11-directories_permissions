@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -p -R a+x
+chmod -R ga+x
