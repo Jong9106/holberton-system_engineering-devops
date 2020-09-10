@@ -1,2 +1,2 @@
 #!/bin/bash
-cp-permissions olleh hello
+cp -p olleh hello
