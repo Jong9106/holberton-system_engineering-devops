@@ -10,6 +10,6 @@ while [ $x -le 12 ]
 			do
 				echo "$y"
 				y=$(( y + 1 ))
-		done
+			done
 		x=$(( x + 1 ))
-done
+	done
