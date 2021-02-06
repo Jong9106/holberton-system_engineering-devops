@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that loops from 1 to 10 and 4 bad luck and 8 good luck
+# FizzBuzz Game
 x=1
 while [ $x -le 100 ]
 	do 
