@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 # Script that loops from 1 to 10 and 4 bad luck and 8 good luck
 x=1
-while [ $x -le 8 ]
+while [ $x -le 10 ]
 	do 
-		echo "Holberton School"
-		if [ $x -eq 3 ]
+		if [ $x -eq 4 ]
 			then
 				echo "bad luck"
-		elif [ $x -eq 6 ]
+		elif [ $x -eq 8 ]
 			then
 				echo "good luck"
+		else
+			echo "Holberton School"
 			fi
 		x=$(( x + 1 ))
 done
