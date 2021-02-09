@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Script that kill definitely
+pross=$(pgrep ./7-highlander -f)
+kill -KILL "$pross"
