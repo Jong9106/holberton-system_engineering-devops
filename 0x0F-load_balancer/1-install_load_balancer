@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# script that add a custom Nginx response header
+
+sudo apt show haproxy
+sudo apt install -y haproxy
+
+text ="
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server 2269-web-01 35.196.100.111:80 check
+   server 2269-web-02 34.74.6.4:80 check"
+
+echo "$text" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
