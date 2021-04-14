@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script to fix the bug to conect to the port 80 but sweet
+service nginx stop
+ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
