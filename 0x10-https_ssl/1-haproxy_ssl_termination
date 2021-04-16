@@ -34,22 +34,15 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend http_front
+frontend www.pixel-jong.tech
    bind *:80
+   bind *:443 ssl crt /etc/haproxy/ssl_crtf/sssl_crtf.pem
+   reqadd X-Forwarded-Prot
    stats uri /haproxy?stats
    default_backend http_back
 
 backend http_back
+   redirect scheme https if !{ ssl_fc }
    balance roundrobin
    server 2269-web-01 35.196.100.111:80 check
    server 2269-web-02 34.74.6.4:80 check
-
-backend foo
-    redirect scheme https if !{ ssl_fc }
-    balance roundrobin
-    server 2158-web-01 35.196.100.111:80 check
-    server 2158-web-02 34.74.6.4:80 check
-
-frontend www.pixel-jong.tech
-    bind *:443 ssl crt /etc/haproxy/ssl_crtf/sssl_crtf.pem
-    reqadd X-Forwarded-Prot
