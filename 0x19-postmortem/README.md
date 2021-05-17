@@ -1,5 +1,6 @@
 ![enter image description here](https://i.imgur.com/VhsBY7O.png)
 # 0x19. Postmortem
+![enter image description here](https://i.imgur.com/0rRhQfr.jpg)
 
 ## Issue Summary
 
