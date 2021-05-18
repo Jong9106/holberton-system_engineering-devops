@@ -9,7 +9,7 @@ import requests
 def number_of_subscribers(subreddit):
     """ Function to get the numbers os subscribers """
 
-    agent = {"User-agent": 'Juan/007'}
+    agent = {"user-agent": 'Juan/007'}
     url = 'https://www.reddit.com'
     resp = (requests.get('{}/r/{}/about.json'.format(url, subreddit),
             headers=agent, allow_redirects=False))
