@@ -28,4 +28,4 @@ def top_ten(subreddit):
                             title = data2.get('title')
                             if title:
                                 print(title)
-    return 0
+    return None
