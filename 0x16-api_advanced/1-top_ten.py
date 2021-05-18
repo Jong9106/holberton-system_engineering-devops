@@ -14,7 +14,7 @@ def top_ten(subreddit):
     resp = (requests.get(url,
             headers=agent, allow_redirects=False))
     if resp.status_code != 200:
-        return 0
+        print(None)
     rspjson = resp.json()
     if rspjson:
         data = rspjson.get('data')
@@ -28,4 +28,3 @@ def top_ten(subreddit):
                             title = data2.get('title')
                             if title:
                                 print(title)
-    return None
