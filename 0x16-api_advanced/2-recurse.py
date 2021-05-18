@@ -15,7 +15,7 @@ def recurse(subreddit, hot_list=[], after=''):
     resp = (requests.get(url,
             headers=agent, allow_redirects=False, params=payload))
     if resp.status_code != 200:
-        print(None)
+        return None
     rspjson = resp.json()
     if rspjson:
         data = rspjson.get('data')
