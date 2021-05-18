@@ -26,5 +26,6 @@ def top_ten(subreddit):
                         data2 = number.get('data')
                         if data2:
                             title = data2.get('title')
-                            print(title)
+                            if title:
+                                print(title)
     return 0
