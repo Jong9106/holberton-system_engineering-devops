@@ -17,5 +17,7 @@ def number_of_subscribers(subreddit):
     if resp.status_code != 200:
         return 0
     rspjson = resp.json()
-    data = rspjson.get("data")
-    return int(data.get('subscribers'))
+    if rspjson:
+        data = rspjson.get("data")
+        return int(data.get('subscribers'))
+    return 0
