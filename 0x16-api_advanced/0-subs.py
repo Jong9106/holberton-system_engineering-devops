@@ -19,5 +19,5 @@ def number_of_subscribers(subreddit):
     rspjson = resp.json()
     if rspjson:
         data = rspjson.get("data")
-        return int(data.get('subscribers'))
+        return data.get('subscribers')
     return 0
